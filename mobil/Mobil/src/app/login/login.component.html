@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="forms-container">
+        <div class="login">
+            <div class="logo">
+                <span class="lo">Ke</span><span class="go">Norby</span>
+            </div>
+            <div class="sign-in-up">
+                <form class="sign-in" [formGroup]="loginForm" (ngSubmit)="login()">
+                    <h4 class="title">Bejelentkezés</h4>
+                    <div class="input-field">
+                        <input type="text" placeholder="Felhasználónév" id="sendmail"  formControlName="user">
+                    </div>
+                    <div class="input-field" id="input-field-pass">
+                        <input class="password" type="password" placeholder="Jelszó" id="pass" formControlName="pass">
+                    </div>
+                    <input type="submit" value="Belépés" class="btn-login" id="Button" name="Login">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

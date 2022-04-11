@@ -1,0 +1,25 @@
+
+<div class="container">
+    <input type="submit" value="Kijelentkezés" class="btn-login logout" id="Button"  (click)="logout()">
+    <input type="submit" value="Mérő" class="btn-login location" id="Button"  (click)="location()">
+    <div class="forms-container">
+        <div class="login">
+            <div class="logo">
+                <span class="lo">Ke</span><span class="go">Norby</span>
+            </div>
+            <div class="sign-in-up">
+                    <h4 class="title">Összes</h4>
+                    <input id="counterAll" type="text"  value="" disabled class="all">
+                    <h4 class="title">Számláló</h4>
+                    <form action="" class="counter-container" [formGroup]="CalcForm" (ngSubmit)="sendData()">
+                        <input type="submit" value="-" class="btn-login left" id="Button" (click)="onClickSzamitoMinusz()">
+                        <div class="input-field">
+                            <input type="text" placeholder="Számláló" id="Counter" formControlName="input">
+                        </div>
+                        <input type="submit" value="+" class="btn-login right" id="Button"   (click)="onClickSzamitoPlus()">
+                    </form>
+                                
+            </div>
+        </div>
+    </div>
+</div>

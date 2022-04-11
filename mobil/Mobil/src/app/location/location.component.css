@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+/*
+font-family: 'Oswald', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/*
+font-family: 'Lato', sans-serif;
+*/
+:root {
+    --darkblue:#3f3d56;
+    --blue:#6c63ff;
+    --white: #ffffff;
+    --orange: #c6850d;
+  }
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: #000000;
+}
+.container{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    /*background-image: url('../img/');*/
+    background-color: #ffffff;
+    overflow: hidden;
+}
+.logo{
+    font-size: 2.6rem;
+    margin: 45px 50px 30px 0px;
+    text-align: end;
+}
+.lo{
+    font-weight: 300;
+}
+.go{
+    font-family: 'Oswald', sans-serif;
+    color:#3f3d56;
+}
+.forms-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+}
+.sign-in-up{
+    position: absolute;
+    top:45%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 2;
+}
+.sign-in{
+    z-index: 2;
+}
+.title{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6rem;
+    color: #3f3d56;
+    margin-bottom: 15px;
+    
+}
+h4{
+    text-align: center;
+}
+.counter-container{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    justify-content: center;
+}
+.btn-login{
+    color: #ffffff;
+    padding: 10px;
+    height: 100%;
+    width: 60px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    background-color: #c6850d;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 2rem;
+}
+.btn-login:hover{
+    color: #6c63ff;
+    background-color: #ffffff;
+}
+.all{
+    background: unset;
+    border: unset;
+    text-align: center;
+    font-size: 2rem;
+    width: 100%;
+}
+.logout{
+    width: max-content;
+    margin: auto;
+    border-radius: 55px;
+    position: absolute;
+    height: max-content;
+    right: 0;
+    font-size: 1rem;
+    z-index: 99;
+}
+.location{
+    width: max-content;
+    margin: auto;
+    border-radius: 55px;
+    position: absolute;
+    height: max-content;
+    left: 0;
+    font-size: 1rem;
+    z-index: 99;
+}
+@media screen and (max-height: 550px) {
+    .logo,.logo.active{
+        display: none;
+    }
+}
+@media screen and (max-width: 720px) {
+    @media screen and (min-height:600px) {
+        .logo{
+            position: absolute;
+            bottom: 10%;
+            right: 0;
+            left: 0;
+            margin: 0;
+            text-align: center;
+        }
+        .sign-in-up{
+            width: 75%;
+            left: 50%;
+        }
+    }
+  }
