@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+/*
+font-family: 'Oswald', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+/*
+font-family: 'Lato', sans-serif;
+*/
+:root {
+    --darkblue:#3f3d56;
+    --blue:#6c63ff;
+    --white: #ffffff;
+    --body:#f2f2f2;
+    --orange:#c6850d;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--darkblue); 
+}
+::-webkit-scrollbar-thumb {
+  background:var(--orange); 
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: #000000;
+}
+body{
+    overflow-x:hidden;
+}
+header{
+    width:100%;
+    background:var(--white);
+}
+.logo{
+    font-size: 2.6rem;
+    background-color: var(--white);
+    width: 100%;
+    max-width: 200px;
+    overflow: hidden;
+}
+.logo-container{
+    margin: auto;
+    width: fit-content;
+}
+.lo{
+    font-weight: 300;
+}
+.go{
+    font-family: 'Oswald', sans-serif;
+    color:var(--darkblue);
+}
+/****menu*****/
+.menu-btn {
+    position: absolute;
+    top:0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger {
+    width: 40px;
+    height: 6px;
+    position: absolute;
+    top:30px;
+    background:var(--orange);
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    /*width: 50px;*/
+    height: 6px;
+    background: var(--orange);
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger::before{
+    width: 50px;
+  }
+  .menu-btn__burger::after {
+    width: 30px;
+  }
+  .menu-btn__burger::before {
+    transform: translateY(-16px);
+  }
+  .menu-btn__burger::after {
+    transform: translateY(16px);
+  }
+  .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+    width: 50px;
+  }
+  .menu.open{
+      display: flex;
+      right: 0;
+      transition: 1s;
+  }
+/*************/
+main{
+    display: flex;
+    overflow: hidden;
+    width: 100vw;
+    /*background-color: var(--blue);*/
+}
+main >.container{
+    min-width: 100vw;
+    transform: translateX(0);
+    transition: 2s;
+    min-height: 100vh;
+    display: flex;
+}
+.menu::before{
+  content: "";
+  position: absolute;
+  width: 3000px;
+  height: 3000px;
+  border-radius: 50%;
+  background: var(--orange);
+  left: 100%;
+  transform:translate(-20%,-100%) ;
+  transition: 3s;
+}
+.menu.open::before {
+  transform: translate(-40%, -50%);
+  background: var(--darkblue);
+  transition: 2s ease-in-out;
+}
+.menu{
+    min-width: 25vw;
+    transform: translateX(0);
+    transition: 2s;
+    overflow: hidden;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.menu ul{
+    list-style: none;
+    width: 100%;
+    z-index: 6;
+    opacity: 0%;
+    padding:0;
+    transition: .5s ease-in-out;
+}
+.menu ul li {
+    color: var(--white);
+}
+.menu .ul-li.open {
+  opacity: 100%;
+  transition: 3s;
+}
+.menu ul li a{
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+  width: 100%;
+  color: var(--white);
+  transition: 1s;
+  font-family: 'Oswald', sans-serif;
+}
+.menu ul li a:hover{
+  background-color: var(--white);
+  color: #3f3d56;
+  transition: 0.5s;
+}
+.container.open{
+    transform:translateX(-25vw) ;
+    transition: 2s;
+}
+.menu.open{
+    transform:translateX(-25vw) ;
+    transition: 2s;
+}
+@media screen and (max-width: 768px) {
+  .menu{
+    min-width: 33vw;
+  }
+  .container.open{
+    transform:translateX(-33vw) ;
+  }
+  .menu.open{
+      transform:translateX(-33vw) ;
+  }
+}
+@media screen and (max-width: 520px) {
+  .menu{
+    min-width: 65vw;
+  }
+  .container.open{
+    transform:translateX(-65vw) ;
+  }
+  .menu.open{
+      transform:translateX(-65vw) ;
+  }
+}
+.sorted-option{
+  display: flex;
+  flex-direction: column;
+}
