@@ -3,7 +3,7 @@ angular (a megnyításához végezze el a laravel lépéseit is)
 	cd Mobil
 	npm install
 	ng serve 
- 
+
 laravel
 	cmd
 	cd API
